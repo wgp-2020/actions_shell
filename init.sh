@@ -1,5 +1,5 @@
 #!/bin/bash
 
-nohup ./ttyd bash &>/dev/null & disown
-./cloudflared tunnel --url http://0.0.0.0:7681
+nohup ./ttyd -i 127.0.0.1 bash &>/dev/null & disown
+./cloudflared tunnel --url http://127.0.0.1:7681
 # tail -f ./cf.log
